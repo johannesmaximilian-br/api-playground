@@ -1,0 +1,47 @@
+### Cretae Song
+POST http://127.0.0.1:3000/api/song HTTP/1.1
+content-type: application/json
+
+{
+    "title": "War Pigs",
+    "artist": "Black Sabbath"
+}
+
+### Create Vote Entry
+POST http://127.0.0.1:3000/api/vote HTTP/1.1
+content-type: application/json
+
+{
+    "user": "test5@test.de",
+    "voting": [
+        {
+            "song_id": "03ba0a18-a06e-4ae4-aaac-3e196903b090"
+        },
+        {
+            "song_id": "3edd1d5c-a40e-449c-ae33-e243b934390f"
+        },
+        {
+            "song_id": "0f8634b1-94d2-44e9-8475-710ffee24222"
+        },
+        {
+            "song_id": "34e3f704-bfa6-4e21-9129-208702b0e4d6"
+        },
+        {
+            "song_id": "1f84df62-281c-498e-9582-5fe3730382c9"
+        }
+    ]
+}
+
+### Votes by User
+GET http://127.0.0.1:3000/api/user/66c2a7d6-47d4-41b6-8c94-160ae239fb09
+
+### Votes by Song
+GET http://127.0.0.1:3000/api/song/96c1e945-8565-45ce-a2d8-9c2f41c70015
+
+
+### Get Chart
+GET http://127.0.0.1:3000/api/vote
+
+
+### Search Songs
+GET http://127.0.0.1:3000/api/song/search?q=lenird
